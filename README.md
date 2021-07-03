@@ -5,6 +5,10 @@ Curretnly supports common hls stream configure. More features and supported plat
 
 ## Installation
 [Python 3.6](https://www.python.org/) or upper is required.
+To install,
+```sh
+pip install -i https://test.pypi.org/simple/ uddd
+```
 
 ## Version
 0.1.0
