@@ -144,7 +144,7 @@ class Downloader():
                     getTSThread.start()
                     downloadPointer += 1
                 if not haveUpdate:
-                    self.timeoutCount += updateInterval
+                    self.timeoutCount += int(updateInterval)
                 else:
                     self.timeoutCount = 0
                 if self.timeoutCount == self.timeout:
