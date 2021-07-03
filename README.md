@@ -1,11 +1,13 @@
 # uddd
 
-A command line tool to download hls stream with regular configure. For self-use.
-More features and supported platforms to be added.
+A command line tool to download hls stream. For self-use.
+Curretnly supports common hls stream configure. More features and supported platforms to be added.
 
 ## Installation
 [Python 3.6](https://www.python.org/) or upper is required.
 
+## Version
+0.1.0
 
 ## Usage
 To download a stream, simply do
