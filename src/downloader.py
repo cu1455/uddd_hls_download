@@ -57,7 +57,7 @@ class Downloader():
             self.proxies = {'https':args.proxy}
         if args.header != None:
             try:
-                headersTokens =  args.header.split(',')
+                headersTokens =  args.header.split('; ')
                 for headersToken in headersTokens:
                     self.headers[headersToken.split('=')[0]] = headersToken.split('=')[1]
             except:
@@ -67,7 +67,7 @@ class Downloader():
             self.headers = {'user-agent': DEFAULT_USER_AGENT}
         if args.cookies != None:
             try:
-                cookiesTokens =  args.cookies.split(',')
+                cookiesTokens =  args.cookies.split('; ')
                 for cookieToken in cookiesTokens:
                     self.cookies[cookieToken.split('=')[0]] = cookieToken.split('=')[1]
             except:

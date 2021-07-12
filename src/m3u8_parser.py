@@ -34,7 +34,7 @@ class M3U8():
             self.proxies = {'https':proxies}
         if header:
             try:
-                headersTokens =  header.split(',')
+                headersTokens =  header.split('; ')
                 for headersToken in headersTokens:
                     self.headers[headersToken.split('=')[0]] = headersToken.split('=')[1]
             except:
@@ -42,7 +42,7 @@ class M3U8():
                 sys.exit()
         if cookies:
             try:
-                cookiesTokens =  cookies.split(',')
+                cookiesTokens =  cookies.split('; ')
                 for cookieToken in cookiesTokens:
                     self.cookies[cookieToken.split('=')[0]] = cookieToken.split('=')[1]
             except:
@@ -88,7 +88,7 @@ class M3U8():
             if operation == 'update':
                 return False
             else:
-                print('[ERROR] Provided URL is valid or expired.')
+                print('[ERROR] Provided URL is invalid or expired.')
                 sys.exit()
         if (self.tokens[0] != '#EXTM3U'):
             print('[ERROR] The file is not a valid m3u8 file.')
@@ -150,7 +150,7 @@ class M3U8():
                 try:
                     attributeValue = splitedToken[1]
                 except IndexError:
-                    print(splitedToken[0])
+                    pass
             if attribute == '#EXT-X-PLAYLIST-TYPE':
                 self.playlistType = attributeValue
             elif attribute == '#EXT-X-TARGETDURATION':
